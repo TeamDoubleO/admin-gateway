@@ -67,7 +67,8 @@ public class GatewaySecurityConfig {
                                                 }
                                             });
 
-                            ex.anyExchange().authenticated();
+                            //                            ex.anyExchange().authenticated();
+                            ex.anyExchange().permitAll();
                         });
 
         return http.build();
