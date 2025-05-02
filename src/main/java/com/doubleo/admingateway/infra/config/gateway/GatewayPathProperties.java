@@ -1,8 +1,7 @@
 package com.doubleo.admingateway.infra.config.gateway;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-
 import java.util.List;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties("security.endpoints")
 public record GatewayPathProperties(

@@ -1,5 +1,7 @@
 package com.doubleo.admingateway.config.security;
 
+import static org.springframework.http.HttpHeaders.SET_COOKIE;
+
 import com.doubleo.admingateway.infra.config.gateway.GatewayPathProperties;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -11,8 +13,6 @@ import org.springframework.security.web.server.SecurityWebFilterChain;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.reactive.CorsConfigurationSource;
 import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
-
-import static org.springframework.http.HttpHeaders.SET_COOKIE;
 
 @Configuration
 @EnableWebFluxSecurity

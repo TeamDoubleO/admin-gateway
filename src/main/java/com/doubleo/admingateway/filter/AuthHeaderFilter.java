@@ -1,6 +1,5 @@
 package com.doubleo.admingateway.filter;
 
-
 import com.doubleo.admingateway.infra.config.gateway.GatewayPathProperties;
 import com.doubleo.admingateway.infra.config.jwt.JwtProperties;
 import com.doubleo.admingateway.infra.config.redis.BlackListTokenService;
@@ -8,6 +7,8 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
+import java.nio.charset.StandardCharsets;
+import javax.crypto.SecretKey;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
@@ -20,9 +21,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.AntPathMatcher;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
-
-import javax.crypto.SecretKey;
-import java.nio.charset.StandardCharsets;
 
 @Slf4j
 @Component
