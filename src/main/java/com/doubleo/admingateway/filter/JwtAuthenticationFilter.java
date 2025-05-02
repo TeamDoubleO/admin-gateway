@@ -52,14 +52,13 @@ public class JwtAuthenticationFilter implements WebFilter {
                             jwtProperties.accessTokenSecret().getBytes(StandardCharsets.UTF_8));
             Claims claims =
                     Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token).getBody();
-            String memberId = claims.getSubject();
+            String adminId = claims.getSubject();
 
             UsernamePasswordAuthenticationToken auth =
-                    new UsernamePasswordAuthenticationToken(
-                            memberId, null, Collections.emptyList());
+                    new UsernamePasswordAuthenticationToken(adminId, null, Collections.emptyList());
 
             ServerHttpRequest mutatedRequest =
-                    exchange.getRequest().mutate().header("X-Member-Id", memberId).build();
+                    exchange.getRequest().mutate().header("X-Admin-Id", adminId).build();
 
             ServerWebExchange mutatedExchange = exchange.mutate().request(mutatedRequest).build();
 
