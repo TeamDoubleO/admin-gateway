@@ -74,6 +74,7 @@ public class GatewaySecurityConfig {
         cfg.addAllowedMethod("*");
         cfg.setAllowCredentials(true);
         cfg.addAllowedOriginPattern("http://localhost:5173");
+        cfg.addAllowedOriginPattern("http://localhost:80");
         cfg.addExposedHeader(SET_COOKIE);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
