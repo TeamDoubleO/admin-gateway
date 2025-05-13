@@ -21,6 +21,9 @@ jobs:
 
       - run: chmod +x ./gradlew
 
+      - name: Run SpotlessApply
+        run: ./gradlew spotlessApply
+
       - name: Run tests
         run: ./gradlew test
 
