@@ -42,3 +42,4 @@ jobs:
           context: .
           push: true
           tags: sunwoo11/keywe_admin_gateway:latest
+          tags: sunwoo11/keywe_admin_gateway:dev
