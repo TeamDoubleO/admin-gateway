@@ -1,7 +1,5 @@
 package com.doubleo.admingateway.config.security;
 
-import static org.springframework.http.HttpHeaders.SET_COOKIE;
-
 import com.doubleo.admingateway.filter.JwtAuthenticationFilter;
 import com.doubleo.admingateway.infra.config.route.GatewayPathProperties;
 import lombok.RequiredArgsConstructor;
