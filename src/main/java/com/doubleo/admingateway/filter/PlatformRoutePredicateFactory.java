@@ -4,7 +4,7 @@ import com.doubleo.admingateway.infra.config.jwt.JwtProperties;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
-import jakarta.ws.rs.core.HttpHeaders;
+import org.springframework.http.HttpHeaders;
 import java.nio.charset.StandardCharsets;
 import java.util.Collections;
 import java.util.List;
